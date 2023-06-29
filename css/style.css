@@ -13,10 +13,19 @@
     --color_text:rgba(24,43,80,255);
     --bg_card:rgba(15,14,23,255);
     --card-text-color:white;
+    --color_email:rgba(52,176,218,255);
+    --color_card_shadow: black;
 }
 
 h1 {
     color: var(--color_heading);
+}
+
+a {
+    font-size: small;
+    color:var(--color_email);
+    display: block;
+    text-decoration: none;
 }
 
 body {
@@ -24,31 +33,49 @@ body {
     text-align: center;
     max-width: 1170px;
     margin: auto;
+    font-family: 'Fredoka', sans-serif;
 }
 
 img {
     max-width: 100%;
-    height: 4rem;
+    height: 6rem;
     display: inline-block;
     float: left;
 
 }
 
+p {
+    margin: 2rem 0;
+}
+
+div > span {
+    float: left;
+    display: block;
+    padding: 0.8rem;
+    line-height: 1.4rem;
+}
+
 .col {
     float: left;
-    width: calc(100% / 3);
+    width: calc(90% / 3);
+    margin-right: calc(10% / 3);
+    margin-bottom: 3rem;
     background-color: var(--bg_card);
     color:var(--card-text-color);
     text-align: start;
-
+    box-shadow: 0px 0px 10px var(--color_card_shadow);    
 }
 
-.clearfix::after {
 
+.clearfix::after {
     content: '';
     display: table;
     clear: both;
+}
 
+.col:hover {
+
+    background-color: blue;
 }
 
 
